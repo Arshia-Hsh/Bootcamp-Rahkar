@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 21</title>
+</head>
+<body>
+
+<p id="output"></p>
+
+<script>
+  function sumDivisors(num) {
+    let sum = 0;
+    for (let i = 1; i <= num / 2; i++) {
+      if (num % i === 0) {
+        sum += i;
+      }
+    }
+    return sum;
+  }
+
+  for (let i = 10; i <= 1500; i++) {
+    let divSum = sumDivisors(i);
+    if (sumDivisors(divSum) === i && divSum !== i) {
+    }
+  }
+</script>
+  <p dir="rtl" , style="font-size: 30px;">برای چاپش هرچی نوشتم نشد ارور داد یا چیزی چاپ نکرد</p>
+
+</body>
+</html>

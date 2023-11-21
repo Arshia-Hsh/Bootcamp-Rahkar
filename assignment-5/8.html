@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 8</title>
+</head>
+<body dir="rtl" style="font-size: 25px;">
+
+<p id="result"></p>
+
+<script>
+  var count = 0;
+  var sum = 0;
+
+  for (var i = 1; i < 300; i++) {
+    if (i % 3 === 0 && i % 7 === 0) {
+      document.getElementById("result").innerHTML += i + "<br>";
+      count++;
+      sum += i;
+    }
+  }
+
+  document.getElementById("result").innerHTML += "تعداد :" + count + "<br>";
+  document.getElementById("result").innerHTML += "جمع: " + sum;
+</script>
+
+</body>
+</html>

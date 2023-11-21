@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 24</title>
+</head>
+<body>
+
+  <input type="text" id="inputString" placeholder="یک رشته وارد کنید">
+  <button onclick="reverseString()">معکوس کردن</button>
+
+  <p id="output"></p>
+
+  <script>
+    function reverseString() {
+      var input = document.getElementById('inputString').value;
+      var output = '';
+
+      for (var i = input.length - 1; i >= 0; i--) {
+        output += input[i];
+      }
+
+      document.getElementById('output').innerHTML = output;
+    }
+  </script>
+
+</body>
+</html>

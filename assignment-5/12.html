@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 12</title>
+</head>
+<body dir="rtl">
+
+<p id="numbers"></p>
+<p id="sum"></p>
+
+<script>
+  var numbers = [];
+  var sum = 0;
+
+  for (var i = 100; i < 1000; i++) {
+    if (Math.floor(i / 100) === 4) {
+      numbers.push(i);
+      sum += i;
+    }
+  }
+
+  document.getElementById("numbers").innerHTML = "اعداد 3 رقمی با رقم یکان 4: " + numbers;
+  document.getElementById("sum").innerHTML = "مجموع اعداد: " + sum;
+</script>
+<p>کل اعداد داخل یک خط هستند لطفا از نوار پایین اسکرول کنید</p>
+
+</body>
+</html>

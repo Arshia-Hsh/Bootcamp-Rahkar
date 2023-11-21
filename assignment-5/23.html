@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 23</title>
+</head>
+<body dir="rtl" , style="font-size: 30px;">
+
+  <h2>از 1 تا 365 یک عدد وارد کنید:</h2>
+  <input type="number" id="inputNumber">
+  <button onclick="calculateDate()">محاسبه تاریخ</button>
+
+  <p id="outputDate"></p>
+
+  <script>
+    function calculateDate() {
+      var input = document.getElementById('inputNumber').value;
+      var dayOfYear = parseInt(input);
+
+      if (dayOfYear >= 1 && dayOfYear <= 365) {
+        var date = new Date(new Date().getFullYear(), 0); 
+        date.setDate(dayOfYear);
+
+        document.getElementById('outputDate').innerHTML = date.toDateString();
+      } else {
+        document.getElementById('outputDate').innerHTML = "لطفا عدد وارد شده بین 1 تا 365 باشد";
+      }
+    }
+    </script>
+    <p> برای نوشتن برنامه یه مقدار از گوگل کمک گرفته شده و از دستور آماده استفاده شده که برای تاریخ میلادی هستش...برای تاریخ شمسی باید عدد وارد شده را به دسته های 1 تا 31...31 تا 62 و ... تقسیم کرد و با استفاده از شرط ایف برنامه را نوشت</p>
+
+</body>
+</html>

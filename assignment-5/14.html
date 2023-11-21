@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 14</title>
+</head>
+<body>
+
+  <input type="text" id="inputNumber" placeholder="عدد را وارد کنید">
+  <button onclick="countEvenDigits()">تایید</button>
+
+  <p id="evenInEvenPosition"></p>
+  <p id="evenInOddPosition"></p>
+
+  <script>
+    function countEvenDigits() {
+      var input = document.getElementById('inputNumber').value;
+      var evenInEvenPos = 0;
+      var evenInOddPos = 0;
+
+      for (var i = 0; i < input.length; i++) {
+        if (i % 2 === 0) { // even position
+          if (parseInt(input[i]) % 2 === 0) {
+            evenInEvenPos++;
+          }
+        } else { // odd position
+          if (parseInt(input[i]) % 2 === 0) {
+            evenInOddPos++;
+          }
+        }
+      }
+
+      document.getElementById('evenInEvenPosition').innerHTML = "تعداد رقم های زوج در جایگاه زوج: " + evenInEvenPos;
+      document.getElementById('evenInOddPosition').innerHTML = "تعداد رقم های زوج در جایگاه فرد: " + evenInOddPos;
+    }
+  </script>
+
+</body>
+</html>

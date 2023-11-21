@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 10</title>
+</head>
+<body>
+
+<script>
+  for (let i = 100; i < 1000; i++) {
+    let num = i;
+    let digit1 = Math.floor(num / 100);
+    let digit2 = Math.floor((num % 100) / 10);
+    let digit3 = num % 10;
+
+    if (Math.pow(digit1, 3) + Math.pow(digit2, 3) + Math.pow(digit3, 3) === num) {
+      document.write(num + "<br>");
+    }
+  }
+</script>
+
+</body>
+</html>

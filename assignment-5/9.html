@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 9</title>
+</head>
+<body>
+
+  <input type="number" id="numberInput">
+  <button onclick="findDivisors()">تایید</button>
+
+  <div id="result"></div>
+
+  <script>
+    function findDivisors() {
+      var number = document.getElementById('numberInput').value;
+      var result = "";
+      
+      for (var i = 1; i <= number; i++) {
+        if (number % i === 0) {
+          result += i + " ";
+        }
+      }
+
+      if (result === "") {
+        document.getElementById('result').innerHTML = "1";
+      } else {
+        document.getElementById('result').innerHTML = "مقسوم علیه ها: " + result;
+      }
+    }
+  </script>
+
+</body>
+</html>

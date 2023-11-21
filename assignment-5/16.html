@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 16</title>
+</head>
+<body dir="rtl">
+
+<h2>اعداد چهار رقمی که مجموع رقم های دهگان و صدگان آن ها با مجموع رقم های یکان و هزارگان آن برابر است </h2>
+
+<p id="result"></p>
+
+<script>
+  let result = "";
+  for (let i = 1000; i < 10000; i++) {
+    let thousands = Math.floor(i / 1000);
+    let hundreds = Math.floor((i % 1000) / 100);
+    let tens = Math.floor((i % 100) / 10);
+    let ones = i % 10;
+
+    if ((thousands + ones) === (hundreds + tens)) {
+      result += i + "<br>";
+    }
+  }
+
+  document.getElementById("result").innerHTML = result;
+</script>
+
+</body>
+</html>

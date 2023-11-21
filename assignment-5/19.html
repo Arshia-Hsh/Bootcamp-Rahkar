@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 19</title>
+</head>
+<body>
+
+<h1>تمامی اعداد سه رقمی ای که رقم یکان و صدگان آن ها اول است</h1>
+
+<p id="output"></p>
+
+<script>
+  function isPrime(num) {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return num > 1;
+  }
+
+  for (let i = 100; i < 1000; i++) {
+    let onesDigit = i % 10;
+    let hundredsDigit = Math.floor(i / 100);
+    
+    if (isPrime(i) && isPrime(onesDigit) && isPrime(hundredsDigit)) {
+      document.getElementById("output").innerHTML += i + "<br>";
+    }
+  }
+</script>
+
+</body>
+</html>

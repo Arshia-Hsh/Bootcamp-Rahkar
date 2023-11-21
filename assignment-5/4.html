@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 4</title>
+</head>
+<body>
+
+  <input type="number" id="numberInput" placeholder="عدد را وارد کنید">
+  <button onclick="displayOddNumbers()">نمایش اعداد فرد</button>
+
+  <p id="result"></p>
+
+  <script>
+    function displayOddNumbers() {
+      var number = document.getElementById('numberInput').value;
+      var result = "";
+
+      for (var i = 1; i <= number; i++) {
+        if (i % 2 !== 0) {
+          result += i + " ";
+        }
+      }
+
+      document.getElementById('result').innerHTML = "اعداد فرداز 1 تا " + number + " شامل: " + result + "هستند";
+    }
+  </script>
+
+</body>
+</html>

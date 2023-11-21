@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 13</title>
+</head>
+<body dir="rtl">
+
+  <input type="number" id="numberInput" placeholder="عدد را وارد کنید">
+  <button onclick="displayDigits()">تایید</button>
+
+  <p id="output"></p>
+
+  <script>
+    function displayDigits() {
+      var number = document.getElementById('numberInput').value;
+
+      if (number.length > 3) {
+        document.getElementById('output').innerHTML = "لطفا یک عدد با تعداد ارقام 3 رقم یا کمتر وارد کنید";
+      } else {
+        var ones = number % 10;
+        var tens = Math.floor((number % 100) / 10);
+        var hundreds = Math.floor(number / 100);
+
+        document.getElementById('output').innerHTML = "یکان: " + ones + "<br>دهگان: " + tens + "<br>صدگان: " + hundreds;
+      }
+    }
+  </script>
+
+</body>
+</html>

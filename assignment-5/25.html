@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 25</title>
+</head>
+<body dir="rtl">
+
+  <h2>چند عدد وارد کنید و آن ها را با استفاده از ویرگول از یکدیگر جدا کنید</h2>
+  <input type="text" id="numbersInput">
+  <button onclick="checkDuplicates()">تایید</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkDuplicates() {
+      var input = document.getElementById('numbersInput').value;
+      var numbers = input.split(',');
+      var duplicates = {};
+
+      for (var i = 0; i < numbers.length; i++) {
+        if (duplicates[numbers[i]]) {
+          duplicates[numbers[i]]++;
+        } else {
+          duplicates[numbers[i]] = 1;
+        }
+      }
+
+      var duplicateNumbers = [];
+      for (var number in duplicates) {
+        if (duplicates[number] > 1) {
+          duplicateNumbers.push(number);
+        }
+      }
+
+      if (duplicateNumbers.length > 0) {
+        document.getElementById('result').innerHTML = 'اعداد تکراری: ' + duplicateNumbers.join(', ');
+      } else {
+        document.getElementById('result').innerHTML = 'هیچ عدد تکراری یافت نشد';
+      }
+    }
+  </script>
+
+</body>
+</html>

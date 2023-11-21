@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 11</title>
+</head>
+<body>
+
+  <input type="number" id="numberInput" placeholder="عدد را وارد کنید">
+  <button onclick="countDigits()">محاسبه تعداد ارقام</button>
+
+  <p id="result"></p>
+
+  <script>
+    function countDigits() {
+      var number = document.getElementById("numberInput").value;
+      var count = 0;
+
+      if (number === "") {
+        document.getElementById("result").innerHTML = "لطفا یک عدد وارد کنید";
+      } else {
+        for (var i = 0; i < number.length; i++) {
+          if (!isNaN(number[i])) {
+            count++;
+          }
+        }
+        document.getElementById("result").innerHTML = "تعداد ارقام برابر است با: " + count;
+      }
+    }
+  </script>
+
+</body>
+</html>

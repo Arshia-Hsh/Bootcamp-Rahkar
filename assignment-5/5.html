@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره 5</title>
+</head>
+<body dir="rtl">
+
+  <h2>محاسبه فاکتوریل</h2>
+
+  <input type="number" id="numberInput" placeholder="عدد را وارد کنید">
+  <button onclick="calculateFactorial()">محاسبه فاکتوریل</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateFactorial() {
+      var number = document.getElementById('numberInput').value;
+      var factorial = 1;
+
+      if (number < 0) {
+        document.getElementById('result').innerHTML = "فاکتوریل برای اعداد کوچکتر از صفر تعریف نشده است";
+      } else if (number == 0) {
+        document.getElementById('result').innerHTML = " فاکتوریل عدد" + number + " برابر با 1 می باشد ";
+      } else {
+        for (var i = 1; i <= number; i++) {
+          factorial *= i;
+        }
+        document.getElementById('result').innerHTML = " فاکتوریل عدد" + number + " برابر با " + factorial + "می باشد  ";
+      }
+    }
+  </script>
+
+</body>
+</html>

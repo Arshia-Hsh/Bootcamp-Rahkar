@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تمرین شماره دو</title>
+</head>
+<body>
+
+<h2>اعداد زوج بین 100 تا 1000:</h2>
+
+<p id="evenNumbers"></p>
+
+<script>
+  var evenNumbers = "";
+  for (var i = 100; i <= 1000; i++) {
+    if (i % 2 === 0) {
+      evenNumbers += i + ", ";
+    }
+  }
+  
+  document.getElementById("evenNumbers").innerHTML = evenNumbers;
+</script>
+
+</body>
+</html>
