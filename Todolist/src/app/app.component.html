@@ -1,0 +1,13 @@
+<div dir="rtl"  style="font-size: large; color:crimson;">
+  <h1>TodoList</h1>
+  
+  <input type="text" #newItem>
+  <button (click)="addItem(newItem.value)">Add</button>
+
+  <ul>
+    <li *ngFor="let item of todoItems; let i = index">
+      {{ item }}
+      <button (click)="removeItem(i)">Remove</button>
+    </li>
+  </ul>
+</div>
