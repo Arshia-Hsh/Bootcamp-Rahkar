@@ -3,19 +3,24 @@
   <br>
   <form [formGroup]="form">
     <label class="form-label">FirstName:</label>
-    <input type="text" class="form-control" formControlName="Firstname" placeholder="enter username">
+    <input type="text"  class="form-control" formControlName="Firstname" placeholder="enter username">
 
     <label class="form-label">Lastname:</label>
-    <input type="text" class="form-control" formControlName="Lastname" placeholder="enter Lastname">
+    <input type="text"  class="form-control" formControlName="Lastname" placeholder="enter Lastname">
       
     <label class="form-label">Password:</label>
     <input type="password" class="form-control" formControlName="Password" placeholder="enter password">
 
     <label class="form-label">Email:</label>
-    <input type="email" class="form-control" formControlName="Email" placeholder="enter email">
+    <input type="email"  class="form-control" formControlName="Email" placeholder="enter email">
   </form>
   <br>
   
   <button (click)="onClickHandle()" class="btn btn-success ">Confirm</button>
   
 </div> 
+<table>
+  <tr *ngFor="let input of userInputs">
+    <td>{{input}}</td>
+  </tr>
+</table>

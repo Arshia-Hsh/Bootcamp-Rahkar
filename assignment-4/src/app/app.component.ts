@@ -25,9 +25,10 @@ export class AppComponent {
     Password: new FormControl(),
     Email : new FormControl()
   });
-
+  userInput: string = '';
+  userInputs: string[] = [];
   onClickHandle(){
-    
+    this.userInputs.push(this.userInput);
     console.log(this.form.value);
   // نتونستم نشون بدم ولی توی کنسول کار میکنه
    
