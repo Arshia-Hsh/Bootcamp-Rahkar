@@ -27,11 +27,9 @@ export class AppComponent {
   });
 
   onClickHandle(){
-    return(
-      this.form.value
-    ),
+    
     console.log(this.form.value);
-  
+  // نتونستم نشون بدم ولی توی کنسول کار میکنه
    
   }
   
