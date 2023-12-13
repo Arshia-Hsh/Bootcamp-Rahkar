@@ -1,0 +1,44 @@
+<div class="container">
+  <ng-container *ngIf="errorMessage">
+    <div class="row">
+      <div class="col-6">
+        <span class="alert bg-danger">{{ errorMessage }}</span>
+      </div>
+    </div>
+  </ng-container>
+
+
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="col-lg-6">
+          <input type="text" formControlName="text" class="form-control" placeholder="پیام را وارد کنید">
+          <input type="text" formControlName="photo" class="form-control" placeholder="لینک عکس مورد نظر را وارد کنید">
+          <input type="text" formControlName="caption" class="form-control" placeholder="کپشن عکس خود را وارد کنید:">
+          <input type="text" formControlName="button" class="form-control" placeholder="تعداد دکمه های خود را وارد کنید">
+      </div>
+    </div>
+
+    <div formArrayName="items">
+
+      <ng-container *ngFor="let item of items.controls; let i=index;let first=first" [formGroupName]="i">
+        <div class="row ">
+          <div class="col-lg-6">
+            <div class="input-group mb-4" dir="rtl">
+
+              <input type="text" formControlName="name" class="form-control" [placeholder]="'items'+ i">
+              <span *ngIf="!first" (click)="removeAt(i)" class="input-group-text"></span>
+              <span *ngIf="first" (click)="addItems()" class="input-group-text"></span>
+            </div>
+
+          </div>
+        </div>
+
+      </ng-container>
+
+
+
+    </div>
+    <button (click)="submit()" type="submit" class="btn btn-success">ارسال پیام</button>
+  </form>
+
+</div>
