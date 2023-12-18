@@ -1,0 +1,21 @@
+<section class="">
+<p style="font-size: 50px">scroll down</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 vh-100 bg-danger">
+          <p>User1 Points: {{ user1Points }}</p>
+          <div class="vh-100 bg-success"></div>
+        </div>
+        <div class="col-lg-6 vh-100 bg-primary">
+          <p>User2 Points: {{ user2Points }}</p>
+          <div class="vh-100 bg-light"></div>
+        </div>
+        <button style="font-size: 50px;" (click)="rollDice()">Roll Dice</button>
+        <p style="font-size: 60px;">Winner: {{ winner }}</p>
+      </div>
+    </div>
+  </section>
+  <!-- <div *ngIf="winner === null">
+  </div>
+  <div *ngIf="winner !== null">
+  </div> -->

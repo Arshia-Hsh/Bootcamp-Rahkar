@@ -1,0 +1,39 @@
+<header class="mb-10">
+
+    <section class="">
+  
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+          </div>
+          <div class="col-lg-6 bg-primary">
+          </div>
+        </div>
+      </div>
+  
+    </section>
+  
+  </header>
+<section class="">
+
+    <div class="container-fluid">
+      <div class="row">
+        <form [formGroup]="form" class="form-inline">
+        <div class="col-lg-6 vh-100 bg-primary">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" formControlName="username" >
+            <button (click)="Click1()">Submit</button>
+        </div>
+        <div class="col-lg-6 vh-100 bg-secondary">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" formControlName="username">
+            <button (click)="Click2()">Submit</button>
+          </div>
+        </form> 
+      </div>
+    </div>
+  
+  </section>
+  <div class="container bg-light mt-5 w-50">
+        <button (click)="onClick()" class="btn btn-dark mb-3 form-control">Submit</button>
+  </div>
