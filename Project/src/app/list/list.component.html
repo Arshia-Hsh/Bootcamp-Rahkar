@@ -1,0 +1,8 @@
+<div *ngFor="let name of names">
+    <div class="card">
+      <img class="card-img-top" [src]="name.picture" alt="{{ name.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ name.name }}</h5>
+      </div>
+    </div>
+  </div>

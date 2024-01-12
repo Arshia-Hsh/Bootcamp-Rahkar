@@ -1,0 +1,24 @@
+<app-transaction-input (addTransaction)="addTransaction($event)"></app-transaction-input>
+<div class="container py-4 d-flex justify-content-center">
+  <div class="col-lg-6 mt-5">
+    <div class="text" style="background: hsla(240, 75%, 67%, 0.55);backdrop-filter: blur(30px);">
+      <div class="card-body p-5 shadow-5 text-center">
+  <h2>Transaction History</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.title }}</td>
+        <td>${{ transaction.price }}</td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+    </div>
+</div>
+</div>
