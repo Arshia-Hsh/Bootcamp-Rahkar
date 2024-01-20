@@ -14,7 +14,7 @@ export class MemoryListComponent {
 
   Memory: { text: string}[] = [];
 
-  addMemory(Memory: {text:string}) {
+  AddMemory(Memory: {text:string}) {
     this.Memory.push(Memory);
   }
 }

@@ -7,27 +7,24 @@ import { IMemoryReq } from './memory.req.model';
     providedIn:"root"
 })
 
-export class DiaryService {
-    http = inject(HttpClient)
+export class MemoryService{
+  http=inject(HttpClient)
 
-    submitDiary(diary: IMemoryReq) :Observable<any> {
-        return this.http.post('http://localhost:3000/api/diary/submit',diary) ;
-    }
+  AddMemory(data:any) : Observable<any>{
+     return this.http.post(`http://localhost:4000/api/creat`,data)
+  }
+ 
+  EditMemory(data:any) : Observable<any>{
+    return this.http.post(`http://localhost:4000/api/edit`,data)
+  }
 
-    getAllDiaries():Observable<any> {
-            return this.http.get('http://localhost:3000/api/diary/get') ;
-    }
+  UpdateMemory(data:any) : Observable<any>{
+    return this.http.put(`http://localhost:4000/api/update`,data)
+  }
+  
+  DeleteMemory(data:any) : Observable<any>{
+   return this.http.post(`http://localhost:4000/api/delete`,data)
+ }
+  }
 
-    getDiaryById(id:number): Observable<any> {
-        return this.http.get(`http://localhost:3000/api/diary/get/${id}`);
-      }
-
-    editDiaryText(text: IMemoryReq,id:number): Observable<any> {
-        return this.http.put(`http://localhost:3000/api/diary/edit/${id}` , text);
-      }
-
-    deleteDiaryById(id:number): Observable<any> {
-        return this.http.delete(`http://localhost:3000/api/diary/delete/${id}`);
-      }
-
-}
+  

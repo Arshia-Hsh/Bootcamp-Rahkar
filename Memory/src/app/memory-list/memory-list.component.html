@@ -1,9 +1,14 @@
 <div>
-    <app-memory-reciever (addMemory)="addMemory($event)"></app-memory-reciever>
+    <app-memory-reciever (addMemory)="AddMemory($event)"></app-memory-reciever>
   
-
-    <h2 style="font-size: 30px; background-color: chartreuse; align-items: center;">Memories</h2>
-    <table style="background-color:aqua;">
+    <div class="top">  
+      <p class="paragraph">نرم افزار مدیریت دلنوشته</p>
+    </div>
+    <div class="Memorywrapper">
+      <div class="action">
+        <div class="text">
+          <div class="paragraph">
+    <table>
       <thead>
         <tr>
           <th>text</th>
@@ -15,4 +20,8 @@
         </tr>
       </tbody>
     </table>
+    </div>
+  </div>
+</div>
+</div>
   </div>

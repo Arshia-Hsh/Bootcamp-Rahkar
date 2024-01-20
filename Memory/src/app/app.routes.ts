@@ -8,12 +8,9 @@ export const routes: Routes = [
             pathMatch: "full",
             redirectTo: "list"
     },
+
     {
-        path: "add",
-        component: MemoryRecieverComponent
-      },
-      {
         path: "list",
         component: MemoryListComponent
-      }
+    }
 ];
